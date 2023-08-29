@@ -33,6 +33,8 @@ const router = createBrowserRouter([
       },
       { path: "sign-up", element: <SignUp></SignUp> },
       { path: "login", element: <LoginPage /> },
+      { path: "movie/:movieId", element: <MoviePage /> },
+      { path: "movie/:movieId/:userId", element: <MoviePage /> },
     ],
   },
 ]);
