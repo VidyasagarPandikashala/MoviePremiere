@@ -1,0 +1,18 @@
+.logoContainer {
+  position: absolute;
+  display: flex;
+  background-color: rgba(17, 14, 1, 0.8);
+  border-radius: 01rem;
+  width: 5rem;
+  height: 5rem;
+  margin: 1.5rem 0 0 4rem;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logo {
+  align-self: center;
+  font-size: 32px;
+  font-family: "Brandon Grotesque", sans-serif;
+  color: #eabc17;
+}
