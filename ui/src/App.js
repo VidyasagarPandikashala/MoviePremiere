@@ -31,6 +31,7 @@ const router = createBrowserRouter([
           return homePageData;
         },
       },
+      { path: "sign-up", element: <SignUp></SignUp> },
     ],
   },
 ]);
