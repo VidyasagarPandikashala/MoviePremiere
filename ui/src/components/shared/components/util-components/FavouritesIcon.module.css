@@ -1,0 +1,22 @@
+.favIconContainer {
+  position: absolute;
+  display: flex;
+  background-color: rgba(17, 14, 1, 0.8);
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 1.5rem 0 0 108rem;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.iconAdded {
+  color: #eabc17;
+  align-self: center;
+  justify-self: center;
+}
+.iconNotAdded {
+  color: white;
+  align-self: center;
+  justify-self: center;
+}
