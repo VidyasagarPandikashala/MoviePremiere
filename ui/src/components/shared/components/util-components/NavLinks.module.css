@@ -1,0 +1,31 @@
+.NavLinksContainer {
+  margin-top: 3rem;
+  margin-left: 11.5rem;
+}
+
+.navList {
+  display: flex;
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: "Regular";
+  color: #eabc17;
+  gap: 3.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* padding: 1rem 4rem 0 0; */
+}
+
+.btnlogout {
+  margin-left: 10rem;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.btnlogout:hover {
+  background-color: #eabc17;
+}
+a {
+  text-decoration: none;
+  color: #eabc17;
+}
