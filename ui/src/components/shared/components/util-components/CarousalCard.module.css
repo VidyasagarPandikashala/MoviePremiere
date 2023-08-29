@@ -1,0 +1,83 @@
+.wrapperContainer {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 4rem;
+  width: 56rem;
+  height: 22.5rem;
+  border-radius: 2rem;
+  /* display: flex;
+  overflow: hidden; */
+}
+/* .imageContainer {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 4rem;
+  width: 56rem;
+  height: 22.5rem;
+  border-radius: 2rem;
+} */
+.timelinePoster {
+  position: absolute;
+  width: 100%; /* The image will fill the container's width */
+  height: 100%; /* The image will fill the container's height */
+  border-radius: 2rem;
+  object-fit: cover;
+}
+.timelineOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); /* You can adjust the opacity here */
+  border-radius: 2rem;
+}
+.posterContainer {
+  background-color: gray;
+  position: absolute;
+  width: 184px;
+  height: 240px;
+  margin: 55px 726px 85px 52px;
+}
+.poster {
+  position: absolute;
+  width: 100%; /* The image will fill the container's width */
+  height: 100%; /* The image will fill the container's height */
+  /* border-radius: 50px; */
+  object-fit: cover;
+}
+
+.overLay {
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(234, 188, 23, 0.15) 0%,
+    rgba(234, 188, 23, 0.25) 50%,
+    rgba(234, 188, 23, 0.8) 100%
+  );
+  position: absolute;
+
+  width: 30rem;
+  height: 6rem;
+  margin: 16.5rem 0 0 26rem;
+  border-radius: 0 0 2rem 0;
+}
+.movieTitle {
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: 800;
+  margin-top: 1.5rem;
+  margin-left: 12.5rem;
+  z-index: 1;
+  white-space: nowrap;
+}
+.movieYear {
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  white-space: nowrap;
+  margin-top: 0rem;
+  margin-left: 12.5rem;
+  color: black;
+  z-index: 1;
+}
