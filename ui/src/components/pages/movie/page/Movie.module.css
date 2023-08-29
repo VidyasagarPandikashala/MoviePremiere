@@ -1,0 +1,46 @@
+.movieBackground {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundPoster {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.moviename {
+  position: relative;
+  font-size: 64px;
+  color: #eabc17;
+  margin-top: 25rem;
+  margin-left: 4rem;
+  padding: 0;
+  z-index: 1;
+}
+.logo {
+  z-index: 1;
+}
+.releaseDate {
+  /* background-color: wheat; */
+  position: absolute;
+  font-size: 24px;
+  color: #eabc17;
+  margin-top: 1rem;
+  margin-left: 4.1rem;
+  padding: 0;
+  z-index: 1;
+}
+.favIcon {
+  position: relative;
+  font-size: 24px;
+  color: #eabc17;
+  margin-top: 1rem;
+  margin-left: 60rem;
+  padding: 0;
+  z-index: 1;
+}
