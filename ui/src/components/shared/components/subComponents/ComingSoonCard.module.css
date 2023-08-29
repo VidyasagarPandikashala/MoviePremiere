@@ -1,0 +1,82 @@
+.wrapperContainer {
+  width: 40rem;
+  height: 24rem;
+  margin-top: 2rem;
+  margin-left: 16rem;
+}
+h3 {
+  font-size: 1.5rem;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: rgba(234, 188, 23, 0.5);
+}
+.movieListContainer {
+  background: linear-gradient(
+    to bottom,
+    rgba(234, 188, 23, 0.8) 0%,
+    rgba(234, 188, 23, 0.7) 15%,
+    rgba(234, 188, 23, 0.5) 50%,
+    rgba(234, 188, 23, 0.25) 100%
+  );
+  width: 40rem;
+  height: 20rem;
+  margin-top: 1rem;
+  overflow-x: hidden;
+}
+.movieListContainer::-webkit-scrollbar {
+  display: none;
+}
+.movieContainer {
+  /* position: absolute; */
+  display: flex;
+  /* background-color: green; */
+  width: 35.5rem;
+  height: 4rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+.imageContainer {
+  background-color: wheat;
+  position: relative;
+  width: 2.6rem;
+  height: 2rem;
+  align-self: flex-start;
+}
+.image {
+  position: absolute;
+  width: 100%; /* The image will fill the container's width */
+  height: 100%; /* The image will fill the container's height */
+  /* border-radius: 50px; */
+  object-fit: cover;
+}
+.movieNameContainer {
+  width: 16.5rem;
+  height: 4rem;
+  margin-left: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.movieYearContainer {
+  width: 9.5rem;
+  height: 2rem;
+  margin-left: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.movieName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(35, 33, 24, 1);
+  align-self: center;
+  margin-left: 4rem;
+  font-family: "Proxima Nova";
+}
+.movieYear {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Proxima Nova";
+  color: rgba(35, 33, 24, 1);
+  align-self: center;
+  justify-self: center;
+}

@@ -1,0 +1,42 @@
+.searchListContainer {
+  display: none;
+}
+
+.searchListContainerActive {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.55);
+  margin-top: 3.5rem;
+  width: 32rem;
+  height: 30rem;
+  overflow: hidden;
+  z-index: 1;
+  color: wheat;
+}
+.searchedMovieContainer {
+  display: flex;
+  width: 24rem;
+  height: 4rem;
+  margin-top: 1.5rem;
+  margin-left: 2.5rem;
+  justify-content: space-around;
+}
+.imageContainer {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 0.5rem;
+}
+.poster {
+  position: absolute;
+  width: 4rem; /* The image will fill the container's width */
+  height: 4rem; /* The image will fill the container's height */
+
+  object-fit: cover;
+}
+.movieName {
+  font-size: medium;
+  margin-left: 4rem;
+}
+.year {
+  font-size: medium;
+  justify-content: flex-end;
+}

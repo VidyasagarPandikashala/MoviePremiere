@@ -1,0 +1,28 @@
+.searchBarContainer {
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 35rem;
+}
+.searchBar {
+  /* margin: 3rem 0 0 0; */
+  padding: 0rem 0 0 2rem;
+  height: 2rem;
+  width: 32rem;
+  background-color: #fcf7e7;
+  /* border-radius: 0.75rem; */
+  align-items: center;
+}
+.upArrow {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  /* margin-top: 48px; */
+  margin-left: 1rem;
+}
+.downArrow {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  /* margin-top: 48px; */
+  /* margin-left: 0.125rem; */
+}
