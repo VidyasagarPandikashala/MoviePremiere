@@ -45,13 +45,25 @@
   justify-self: center;
 }
 button {
-  background-color: rgba(252, 247, 231, 1);
+  color: black;
   width: 96px;
   height: 32px;
   margin-top: 1rem;
   border-radius: 10px;
+  cursor: pointer;
   border: none;
 }
 p {
   color: rgba(234, 188, 23, 1);
+}
+button:hover {
+  background-color: #eabc17;
+  color: black;
+}
+.anchorTag {
+  color: #eee7d0;
+}
+.anchorTag:hover {
+  color: #eabc17;
+  text-decoration: underline;
 }

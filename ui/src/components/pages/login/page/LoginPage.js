@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLoggedInStatus } from "../redux/LoginSlice";
 import { useState } from "react";
 import setCookie from "../../../shared/utils/cookies/setCookies";
+import { getAllfavouritesForCurrentUser } from "../../favourite/redux/FavouritesSlice";
 
 function LoginPage() {
   const loginStatus = useSelector((state) => state.login.isLoggedIn);
@@ -30,6 +31,7 @@ function LoginPage() {
       setDisplayError(true);
       event.target.reset();
     } else {
+      dispatch(getAllfavouritesForCurrentUser());
       const token = response.payload;
       setCookie("token", token, 2);
       setYetToLogin(true);
@@ -80,8 +82,10 @@ function LoginPage() {
           </div>
         </form>
         <div className={styles.signUpContainer}>
-          <p>
-            <Link to="sign-up">click hear signup</Link>
+          <p className={styles.signUp}>
+            <Link className={styles.anchorTag} to="sign-up">
+              click hear signup
+            </Link>
           </p>
         </div>
       </div>
