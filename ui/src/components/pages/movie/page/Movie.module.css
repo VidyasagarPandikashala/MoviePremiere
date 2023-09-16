@@ -6,7 +6,13 @@
   margin: 0;
   padding: 0;
 }
-
+.movieBackgroundOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .backgroundPoster {
   position: fixed;
   width: 100%;
@@ -44,3 +50,53 @@
   padding: 0;
   z-index: 1;
 }
+
+.toggleAboutAndReview {
+  display: flex;
+}
+
+.toggleAboutAndReview {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 896px;
+  height: 30px;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 40px;
+  margin-left: 64px;
+  z-index: 2;
+}
+
+.aboutWrapper h3 {
+  color: white;
+  cursor: pointer;
+}
+.aboutWrapper h3:hover {
+  color: #c89c0e;
+}
+.reviewWrapper h3 {
+  color: white;
+  cursor: pointer;
+}
+.reviewWrapper h3:hover {
+  color: #c89c0e;
+}
+/* 
+.aboutSection {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background-color: yellow;
+  color: white;
+  z-index: 1;
+}
+.reviewSection {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  margin-top: 20x;
+  background-color: yellow;
+  color: wheat;
+  z-index: 1;
+} */
