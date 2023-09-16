@@ -1,3 +1,11 @@
+.searchListOverlay {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  margin-top: 6rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
 .searchListContainer {
   display: none;
 }

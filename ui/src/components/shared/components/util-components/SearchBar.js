@@ -1,22 +1,37 @@
+import { useEffect, useState } from "react";
 import styles from "./SearchBar.module.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import SearchedList from "./SearchedList";
 
-const SearchBar = ({ searchedData, onSearch }) => {
+const SearchBar = ({
+  searchedData,
+  handleOnSearch,
+  handleOnClick,
+  clickedOverlay,
+  isSearchListVisible, // Pass the prop
+}) => {
+  const [isVisibleCondition, setisVisibleCondition] = useState(false);
+  useEffect(() => {
+    if (clickedOverlay) {
+      setisVisibleCondition(false);
+    } else {
+      setisVisibleCondition(true);
+    }
+  }, [clickedOverlay, setisVisibleCondition]);
   return (
     <>
       <div className={styles.searchBarContainer}>
         <input
-          onKeyDown={onSearch}
+          onKeyUp={handleOnSearch}
           type="search"
           className={styles.searchBar}
           placeholder="search by movie name"
-        ></input>
-        <SearchedList searchedData={searchedData}></SearchedList>
-        <FontAwesomeIcon className={styles.upArrow} icon={faArrowUp} />
-        <FontAwesomeIcon className={styles.downArrow} icon={faArrowDown} />
+        />
+        <SearchedList
+          searchedData={searchedData}
+          onClickHandler={handleOnClick}
+          isVisible={isVisibleCondition}
+        ></SearchedList>
       </div>
     </>
   );

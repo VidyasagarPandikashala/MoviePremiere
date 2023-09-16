@@ -10,7 +10,11 @@ function LoginBackground() {
         </div>
       </Link>
       <div className={styles.imageContainer}>
-        <img src="photos/loginBackground.jpg" className={styles.poster}></img>
+        <img
+          src="photos/loginBackground.jpg"
+          className={styles.poster}
+          alt="login-background"
+        ></img>
       </div>
     </div>
   );

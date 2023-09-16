@@ -4,6 +4,7 @@ import HttpFetch from "../../../shared/utils/http-client/HttpFetch";
 const moviePageApi = {
   movieData: getMovieData,
   toggleAction: toggleAction,
+  isFavouriteExist: isFavouriteExist,
 };
 
 function getMovieData(id, size) {
