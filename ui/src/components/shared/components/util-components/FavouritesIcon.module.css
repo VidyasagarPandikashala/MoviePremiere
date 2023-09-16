@@ -1,0 +1,49 @@
+.favIconContainerMoviePage {
+  position: absolute;
+  display: flex;
+  background-color: rgba(17, 14, 1, 0.8);
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 1.5rem 0 0 108rem;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.iconAdded {
+  color: #eabc17;
+  align-self: center;
+  justify-self: center;
+}
+.iconNotAdded {
+  color: white;
+  align-self: center;
+  justify-self: center;
+}
+
+.favIconContainerFavPage {
+  position: absolute;
+  display: flex;
+  background-color: rgba(17, 14, 1, 0.8);
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  margin-top: 45rem;
+  margin-left: 30rem;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.favIconContainerTopRatedPage {
+  position: relative;
+  display: flex;
+  background-color: rgba(17, 14, 1, 0.8);
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  margin-top: 44em;
+  margin-left: 24rem;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+}

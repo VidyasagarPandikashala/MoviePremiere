@@ -1,83 +1,104 @@
 .wrapperContainer {
   position: relative;
-  margin-top: 3rem;
-  margin-left: 4rem;
-  width: 56rem;
-  height: 22.5rem;
+
+  width: 1280px;
+  height: 480px;
   border-radius: 2rem;
-  /* display: flex;
-  overflow: hidden; */
-}
-/* .imageContainer {
-  position: relative;
-  margin-top: 3rem;
-  margin-left: 4rem;
-  width: 56rem;
-  height: 22.5rem;
-  border-radius: 2rem;
-} */
-.timelinePoster {
-  position: absolute;
-  width: 100%; /* The image will fill the container's width */
-  height: 100%; /* The image will fill the container's height */
-  border-radius: 2rem;
-  object-fit: cover;
-}
-.timelineOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.55); /* You can adjust the opacity here */
-  border-radius: 2rem;
-}
-.posterContainer {
-  background-color: gray;
-  position: absolute;
-  width: 184px;
-  height: 240px;
-  margin: 55px 726px 85px 52px;
-}
-.poster {
-  position: absolute;
-  width: 100%; /* The image will fill the container's width */
-  height: 100%; /* The image will fill the container's height */
-  /* border-radius: 50px; */
-  object-fit: cover;
+  box-shadow: -8px 16px 60px 16px rgb(80, 80, 79);
+  overflow: hidden;
 }
 
-.overLay {
-  position: relative;
+.leftBtnOverlay {
+  position: absolute;
+  width: 64px;
+  height: 480px;
+  z-index: 1;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.25) 0%,
+
+    rgba(0, 0, 0, 0.5) 50%,
+
+    rgba(56, 54, 46, 1) 100%
+  );
+}
+.leftBtn {
+  position: absolute;
+  z-index: 1;
+  color: #c89c0e;
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 240px;
+  margin-left: 24px;
+  cursor: pointer;
+}
+.rightBtnOverlay {
+  position: absolute;
+  width: 64px;
+  height: 480px;
+  z-index: 1;
+  margin-left: 1216px;
   background: linear-gradient(
     to right,
-    rgba(234, 188, 23, 0.15) 0%,
-    rgba(234, 188, 23, 0.25) 50%,
-    rgba(234, 188, 23, 0.8) 100%
-  );
-  position: absolute;
+    rgba(0, 0, 0, 0.25) 0%,
 
-  width: 30rem;
-  height: 6rem;
-  margin: 16.5rem 0 0 26rem;
-  border-radius: 0 0 2rem 0;
+    rgba(0, 0, 0, 0.5) 50%,
+
+    rgba(56, 54, 46, 1) 100%
+  );
 }
-.movieTitle {
-  font-size: 16px;
-  font-family: "Proxima Nova";
-  font-weight: 800;
-  margin-top: 1.5rem;
-  margin-left: 12.5rem;
+.rightBtn {
+  position: absolute;
   z-index: 1;
-  white-space: nowrap;
+  color: #c89c0e;
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 240px;
+  margin-left: 16px;
+  padding: 0;
+
+  cursor: pointer;
 }
-.movieYear {
-  font-size: 16px;
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieDetails {
+  position: absolute;
+  z-index: 1;
+  width: 480px;
+  height: 180px;
+  margin-top: 304px;
+  margin-left: 736px;
+  background: linear-gradient(
+    to left,
+    rgba(234, 188, 23, 0.2) 0%,
+    rgba(234, 188, 23, 0.3) 15%,
+    rgba(234, 188, 23, 0.5) 50%,
+    rgba(234, 188, 23, 0.2) 100%
+  );
+  align-items: center;
+  justify-content: center;
+}
+.h3 {
+  color: #070600;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: black;
+  margin-top: 2rem;
+  margin-left: 80px;
+  line-height: 1.5ch;
+  /* white-space: nowrap; */
+}
+.para {
   font-family: "Proxima Nova";
-  font-weight: 600;
-  white-space: nowrap;
-  margin-top: 0rem;
-  margin-left: 12.5rem;
   color: black;
-  z-index: 1;
+  font-size: medium;
+  font-weight: 600;
+  margin-left: 80px;
+  margin-top: 16px;
 }

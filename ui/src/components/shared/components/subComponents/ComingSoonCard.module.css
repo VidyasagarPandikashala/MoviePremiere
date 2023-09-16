@@ -1,82 +1,108 @@
+/* CSS for ComingSoonCard component */
+
+/* Wrapper Container */
 .wrapperContainer {
-  width: 40rem;
-  height: 24rem;
-  margin-top: 2rem;
-  margin-left: 16rem;
+  background-color: rgba(56, 54, 46, 1);
+  width: 28rem;
+  height: 30rem;
+  border-radius: 1rem;
+  z-index: 1;
+  /* box-shadow: 24px 60px 240px 16px black; */
+  box-shadow: -4px 16px 24px 4px rgb(80, 80, 79);
 }
-h3 {
+
+/* "coming soon..." Heading */
+.movieSectionName {
+  position: absolute;
   font-size: 1.5rem;
   font-family: "Proxima Nova";
   font-weight: 600;
-  margin-top: 0.5rem;
-  color: rgba(234, 188, 23, 0.5);
-}
-.movieListContainer {
-  background: linear-gradient(
-    to bottom,
-    rgba(234, 188, 23, 0.8) 0%,
-    rgba(234, 188, 23, 0.7) 15%,
-    rgba(234, 188, 23, 0.5) 50%,
-    rgba(234, 188, 23, 0.25) 100%
-  );
-  width: 40rem;
-  height: 20rem;
   margin-top: 1rem;
+  padding: 0;
+  z-index: 1;
+  margin-left: 0.5rem;
+  background: linear-gradient(45deg, #eabc17, #c89c0e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Movie List Container */
+.movieListContainer {
+  position: absolute;
+  background: rgba(234, 188, 23, 0.69);
+  width: 28rem;
+  height: 26rem;
+  margin-top: 4rem;
+  border-radius: 0rem 0rem 1rem 1rem;
   overflow-x: hidden;
 }
 .movieListContainer::-webkit-scrollbar {
   display: none;
 }
+
+/* Movie Container */
 .movieContainer {
-  /* position: absolute; */
   display: flex;
-  /* background-color: green; */
   width: 35.5rem;
   height: 4rem;
   margin-top: 1.5rem;
   margin-left: 2rem;
 }
+
+/* Image Container */
 .imageContainer {
-  background-color: wheat;
+  background-color: rgba(35, 33, 24, 1);
   position: relative;
   width: 2.6rem;
   height: 2rem;
   align-self: flex-start;
 }
+
+/* Movie Image */
 .image {
-  position: absolute;
-  width: 100%; /* The image will fill the container's width */
-  height: 100%; /* The image will fill the container's height */
-  /* border-radius: 50px; */
+  font-size: 8px;
+  color: black;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
+
+/* Movie Name Container */
 .movieNameContainer {
   width: 16.5rem;
   height: 4rem;
-  margin-left: 3rem;
+  margin-left: 0.6rem;
   align-items: center;
   justify-content: center;
 }
+
+/* Movie Year Container */
 .movieYearContainer {
   width: 9.5rem;
   height: 2rem;
-  margin-left: 3rem;
+  margin-left: 0.5rem;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
+
+/* Movie Name */
 .movieName {
   font-size: 1rem;
   font-weight: 600;
-  color: rgba(35, 33, 24, 1);
+  color: #070600;
   align-self: center;
   margin-left: 4rem;
   font-family: "Proxima Nova";
 }
+
+/* Movie Year */
 .movieYear {
   font-size: 1rem;
   font-weight: 400;
   font-family: "Proxima Nova";
-  color: rgba(35, 33, 24, 1);
+  color: #070600;
   align-self: center;
   justify-self: center;
 }

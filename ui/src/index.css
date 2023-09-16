@@ -18,7 +18,9 @@ dd {
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
@@ -32,10 +34,14 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: #38362e;
+  background-color: #fdf9ea;
+  /* background-color: yellowgreen; */
 }
 
 /* A elements that don't have a class get default styles */

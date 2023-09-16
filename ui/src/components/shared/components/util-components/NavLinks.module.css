@@ -8,7 +8,7 @@
   font-size: 16px;
   font-family: "Proxima Nova";
   font-weight: "Regular";
-  color: #eabc17;
+  color: #070600;
   gap: 3.5rem;
   list-style: none;
   margin: 0;
@@ -17,9 +17,10 @@
 }
 
 .btnlogout {
-  margin-left: 10rem;
   margin-top: 0;
   cursor: pointer;
+  background-color: #070600;
+  color: white;
 }
 
 .btnlogout:hover {
@@ -27,5 +28,5 @@
 }
 a {
   text-decoration: none;
-  color: #eabc17;
+  color: #070600;
 }

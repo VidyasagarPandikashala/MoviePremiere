@@ -1,0 +1,15 @@
+.review_section_wrapper {
+  position: absolute;
+  width: 840px;
+  height: auto;
+  margin-top: 4rem;
+  margin-left: -36rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 2rem;
+  z-index: 2;
+}
+
+.textarea {
+  width: 800px;
+  height: auto;
+}
