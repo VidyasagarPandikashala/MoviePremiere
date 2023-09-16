@@ -1,0 +1,59 @@
+.aboutSectionContainer {
+  position: absolute;
+  width: 840px;
+  height: auto;
+  margin-top: 4rem;
+  margin-left: -18rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 2rem;
+  z-index: 1;
+}
+.actors {
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: lighter;
+  margin-top: 10rem;
+  margin-left: 1rem;
+  color: #eabc17;
+}
+.genre {
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: lighter;
+  margin-top: 5rem;
+  margin-left: 1rem;
+  color: #eabc17;
+}
+.storyLine {
+  font-size: 24px !important;
+  font-family: "Brandon Grotesque" !important;
+  font-weight: 800 !important;
+  color: #eabc17 !important;
+  margin-top: 6rem !important;
+  margin-left: 1rem !important;
+}
+
+.storyLineDetail {
+  font-size: 16px !important;
+  font-family: "Proxima Nova" !important;
+  font-weight: lighter !important;
+  margin-top: 2rem !important;
+  margin-left: 1rem !important;
+  color: #ffffff !important;
+}
+.actors {
+  font-size: 16px !important;
+  font-family: "Brandon Grotesque" !important;
+  font-weight: bold !important;
+  margin-top: 3rem !important;
+  margin-left: 1rem !important;
+  color: #eabc17 !important;
+}
+.genre {
+  font-size: 16px !important;
+  font-family: "Brandon Grotesque" !important;
+  font-weight: bold !important;
+  margin-top: 1rem !important;
+  margin-left: 1rem !important;
+  color: #eabc17 !important;
+}
