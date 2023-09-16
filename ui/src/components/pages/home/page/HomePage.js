@@ -5,35 +5,48 @@ import HomePageApi from "../api/homePageApi";
 import NavigationBar from "../../../shared/components/subComponents/NavigationBar";
 import MovieCarousal from "../../../shared/components/subComponents/MovieCarousal";
 import ComingSoonCard from "../../../shared/components/subComponents/ComingSoonCard";
+import { useDebounce } from "@uidotdev/usehooks";
+import TopRated from "../../../shared/components/subComponents/TopRated";
 
 const HomePage = () => {
   const [data, setData] = useState([]);
   const [searchedKeys, setSearchedKeys] = useState("");
+  const [clickedOverlay, setClickedOverlay] = useState(false);
+
+  function onClickEventHandler() {
+    setClickedOverlay(!clickedOverlay); // Toggle the overlay
+  }
+  const debouncedSearchTerm = useDebounce(searchedKeys, 1000);
 
   function searchEventHandler(event) {
-    setSearchedKeys(event.target.value);
+    setClickedOverlay(false);
+    setSearchedKeys(event.target.value ? event.target.value : "");
   }
-
-  useEffect(() => {
-    async function searchedData(searchedKeys) {
-      if (searchedKeys !== "") {
-        const searchData = await HomePageApi.searchedResult(searchedKeys);
-        setData(searchData);
-      }
+  async function searchedData(searchedKeys) {
+    if (searchedKeys.length >= 3) {
+      const searchData = await HomePageApi.searchedResult(searchedKeys);
+      setData(searchData);
+    } else {
+      setData([]);
     }
-    searchedData(searchedKeys);
-  }, [searchedKeys]);
+  }
+  useEffect(() => {
+    searchedData(debouncedSearchTerm);
+  }, [debouncedSearchTerm]);
 
   return (
     <>
       <NavigationBar
-        onSearch={searchEventHandler}
+        handleOnSearch={searchEventHandler}
         searchedData={data}
+        onClickHandler={onClickEventHandler}
+        clickedOverlay={clickedOverlay}
       ></NavigationBar>
-      <main>
+      <main className={styles.mainSection}>
         <section className={styles.headerSection}>
           <MovieCarousal></MovieCarousal>
           <ComingSoonCard></ComingSoonCard>
+          <TopRated />
         </section>
       </main>
     </>
