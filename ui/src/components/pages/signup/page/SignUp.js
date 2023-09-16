@@ -8,7 +8,7 @@ import signupApi from "../api/signupApi";
 function SignUp() {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
-  const [passwordCheck, setPasswordCheck] = useState(true);
+  // const [passwordCheck, setPasswordCheck] = useState(true);
   function userNameInputHandler(event) {
     const usernameEntered = event.target.value;
     setUserDetails((prevSignUpDetail) => ({
@@ -25,7 +25,6 @@ function SignUp() {
       password: passwordEntered,
     }));
   }
-  console.log(userDetails.password);
 
   function confirmPasswordInputHandler(event) {
     const confirmPasswordEntered = event.target.value;
@@ -33,11 +32,7 @@ function SignUp() {
       ...prevSignUpDetail,
       confirmPassword: confirmPasswordEntered,
     }));
-    // if (!passwordValidator()) {
-    //   event.target.value = "";
-    // }
   }
-  console.log(userDetails.confirmPassword);
 
   function passwordValidator() {
     if (userDetails.password === userDetails.confirmPassword) {
@@ -48,16 +43,15 @@ function SignUp() {
   }
 
   function confirmPasswordBlurHandler(event) {
-    console.log(event);
     if (!passwordValidator()) {
       event.target.value = "";
       setUserDetails((prevSignUpDetail) => ({
         ...prevSignUpDetail,
-        username: "",
+        userName: "",
         password: "",
         confirmPassword: "",
       }));
-      setPasswordCheck(false);
+      // setPasswordCheck(false);
     }
   }
 
