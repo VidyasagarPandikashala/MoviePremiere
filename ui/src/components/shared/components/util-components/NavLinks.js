@@ -18,21 +18,27 @@ function NavLinks() {
     dispatch(clearData());
   }
   return (
-    <div className={styles.NavLinksContainer}>
-      <ul className={styles.navList}>
-        <li>
-          <Link to="favourites">favourites </Link>
+    <div className={styles.nav_links_container}>
+      <ul className={styles.nav_list}>
+        <li className={styles.list}>
+          <Link className={styles.link} to="favourites">
+            FAVORITES{" "}
+          </Link>
         </li>
-        <li>
-          <Link to="sign-up">signup</Link>
+        <li className={styles.list}>
+          <Link className={styles.link} to="sign-up">
+            SIGN-UP
+          </Link>
         </li>
         {loginStatus.isLoggedIn ? (
           <button className={styles.btnlogout} onClick={logOutOnClickHandler}>
-            Logout
+            LOG-OUT
           </button>
         ) : (
-          <li>
-            <Link to="login">login</Link>
+          <li className={styles.list}>
+            <Link className={styles.link} to="login">
+              LOGIN
+            </Link>
           </li>
         )}
       </ul>

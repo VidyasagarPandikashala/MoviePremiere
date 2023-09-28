@@ -1,32 +1,56 @@
-.NavLinksContainer {
-  margin-top: 3rem;
-  margin-left: 11.5rem;
+:root {
+  --margin-left-nav-link: calc(max(1728px, 100%) * 0.016);
+  --margin-left-nav-link: calc(min(1728px, 100%) * 0);
+  --width-search-bar: 32.951%;
+  --height-search-bar: 45.5%;
 }
 
-.navList {
+.nav_links_container {
+  margin-left: var(--margin-left-nav-link);
+}
+.nav_list {
   display: flex;
-  font-size: 16px;
-  font-family: "Proxima Nova";
-  font-weight: "Regular";
-  color: #070600;
-  gap: 3.5rem;
-  list-style: none;
-  margin: 0;
+  width: calc(max(1728px, 100%) * 0.14884);
+  gap: calc(min(1728px, 100%) * 0.0075);
+  gap: calc(max(1728px, 100%) * 00.0125);
   padding: 0;
-  /* padding: 1rem 4rem 0 0; */
 }
-
-.btnlogout {
-  margin-top: 0;
-  cursor: pointer;
-  background-color: #070600;
-  color: white;
+.list {
+  list-style: none;
 }
-
-.btnlogout:hover {
-  background-color: #eabc17;
-}
-a {
+.link {
   text-decoration: none;
-  color: #070600;
+  font-family: var(--ff-paragraph);
+  font-size: var(--fs-custom-text);
+  color: var(--clr-primary-neutral);
+  letter-spacing: 0.05ch;
+  text-wrap: nowrap;
+}
+.btnlogout {
+  background-color: var(--clr-secondary-neutral);
+  color: var(--clr-primary-neutral);
+  border: 1px solid var(--clr-primary-neutral);
+  font-family: var(--ff-paragraph);
+  font-size: var(--fs-custom-text);
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+.btnlogout:hover {
+  background-color: var(--clr-primary-neutral);
+  color: var(--clr-secondary-neutral);
+}
+@media (max-width: 650px) {
+  .hamburg_icon {
+    display: block;
+  }
+  .nav_links_container {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .nav_links_container {
+    margin-left: 2rem;
+  }
 }
