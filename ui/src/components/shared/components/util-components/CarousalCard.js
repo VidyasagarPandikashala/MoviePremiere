@@ -21,29 +21,28 @@ function CarousalCard({ movieData }) {
   }
   return (
     <>
-      <div className={styles.wrapperContainer}>
-        <div className={styles.leftBtnOverlay}>
-          <div className={styles.leftBtn} onClick={prevBtnHandler}>{`<`}</div>
+      <div className={styles.wrapper_container}>
+        <h3 className={styles.section_name}>LATEST RELEASES</h3>
+        <div className={styles.left_btn_overlay}>
+          <div className={styles.left_btn} onClick={prevBtnHandler}>{`<`}</div>
         </div>
-        <div className={styles.rightBtnOverlay}>
-          <div className={styles.rightBtn} onClick={nextBtnHandler}>{`>`}</div>
+        <div className={styles.right_btn_overlay}>
+          <div className={styles.right_btn} onClick={nextBtnHandler}>{`>`}</div>
         </div>
         <Link to={`movie/${movieData[currentIndex].movieId}`}>
-          <div className={styles.imageContainer}>
-            <img
-              className={styles.image}
-              src={movieData[currentIndex].imageUrl}
-              alt="movieName"
-            />
-            <div className="imageOverlay"></div>
+          <img
+            className={styles.image}
+            src={movieData[currentIndex].imageUrl}
+            alt="movieName"
+          />
+          <div className={styles.text_overlay}></div>
+          <div className={styles.movie_details}>
+            <h3 className={styles.movie_name}>
+              {movieData[currentIndex].movieName.toUpperCase()}
+            </h3>
+            <p className={styles.para}>{movieData[currentIndex].releaseDate}</p>
           </div>
         </Link>
-        <div className={styles.movieDetails}>
-          <h3 className={styles.h3}>
-            {movieData[currentIndex].movieName.toUpperCase()}
-          </h3>
-          <p className={styles.para}>{movieData[currentIndex].releaseDate}</p>
-        </div>
       </div>
     </>
   );
