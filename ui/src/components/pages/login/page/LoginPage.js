@@ -49,8 +49,11 @@ function LoginPage() {
     }
   }
   return (
-    <>
-      <div className={styles.formContainer}>
+    <div className={styles.login_page_container}>
+      <div className={styles.login_background_container}>
+        <LoginBackground></LoginBackground>
+      </div>
+      <div className={styles.form_container}>
         <form
           id="loginForm"
           className={styles.form}
@@ -78,19 +81,20 @@ function LoginPage() {
             />
           </div>
           <div className={styles.btnContainer}>
-            <button type="submit">Login</button>
+            <button className={styles.login_btn} type="submit">
+              Login
+            </button>
           </div>
         </form>
         <div className={styles.signUpContainer}>
           <p className={styles.signUp}>
-            <Link className={styles.anchorTag} to="sign-up">
-              click hear signup
+            <Link className={styles.anchorTag} to="/sign-up">
+              CLICK HERE TO SIGNUP
             </Link>
           </p>
         </div>
       </div>
-      <LoginBackground></LoginBackground>
-    </>
+    </div>
   );
 }
 
