@@ -9,26 +9,39 @@ function ComingSoonCard() {
     event.target.style.display = "none";
   };
   return (
-    <div className={styles.wrapperContainer}>
-      <h3 className={styles.movieSectionName}>coming soon...</h3>
-      <div className={styles.movieListContainer}>
+    <div className={styles.wrapper_container}>
+      <h3 className={styles.movie_section_name}>COMING SOON</h3>
+      <div className={styles.movie_list_container}>
         {movieList.map((movie) => {
           return (
             <Link to={`movie/${movie.movieId}`}>
-              <div className={styles.movieContainer} key={movie.movieId}>
-                <div className={styles.imageContainer}>
+              <div
+                className={styles.movie_detail_container}
+                key={movie.movieId}
+              >
+                <div className={styles.image_overlay_container}>
                   <img
-                    class={styles.image}
+                    className={styles.image_overlay}
                     src={movie.imageUrl}
                     alt={movie.movieName}
                     onError={handleImageError}
                   />
                 </div>
-                <div className={styles.movieNameContainer}>
-                  <p className={styles.movieName}>{movie.movieName}</p>
+                <div className={styles.imageContainer}>
+                  <img
+                    className={styles.image}
+                    src={movie.imageUrl}
+                    alt={movie.movieName}
+                    onError={handleImageError}
+                  />
+                </div>
+                <div className={styles.movie_name_container}>
+                  <p className={styles.movieName}>
+                    {movie.movieName.toUpperCase()}
+                  </p>
                 </div>
                 <div className={styles.movieYearContainer}>
-                  <p className={styles.movieYear}>{movie.releaseDate}</p>
+                  <p className={styles.movieYear}>{movie.year}</p>
                 </div>
               </div>
             </Link>
