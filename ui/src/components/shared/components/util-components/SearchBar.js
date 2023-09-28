@@ -8,7 +8,8 @@ const SearchBar = ({
   handleOnSearch,
   handleOnClick,
   clickedOverlay,
-  isSearchListVisible, // Pass the prop
+  isSearchListVisible,
+  hamburgClick, // Pass the prop
 }) => {
   const [isVisibleCondition, setisVisibleCondition] = useState(false);
   useEffect(() => {
@@ -20,11 +21,11 @@ const SearchBar = ({
   }, [clickedOverlay, setisVisibleCondition]);
   return (
     <>
-      <div className={styles.searchBarContainer}>
+      <div className={styles.search_bar_container}>
         <input
           onKeyUp={handleOnSearch}
           type="search"
-          className={styles.searchBar}
+          className={styles.search_bar}
           placeholder="search by movie name"
         />
         <SearchedList
