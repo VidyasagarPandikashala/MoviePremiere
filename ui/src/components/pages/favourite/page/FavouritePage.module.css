@@ -1,5 +1,21 @@
+.favpage_container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+  gap: 2rem;
+  /* background-color: red; */
+}
+.logo_container {
+  margin-inline: 80px;
+  margin-top: 40px;
+}
 .movieCard {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 500px;
   flex-flow: wrap;
-  gap: 0.15rem;
+  margin-inline: 80px;
+  gap: 2rem;
 }
