@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./SearchedList.module.css";
+import { Link } from "react-router-dom";
 
 function SearchedList({
   searchedData,
@@ -17,11 +18,17 @@ function SearchedList({
     return null;
   }
   return (
-    <div className={styles.searchListOverlay} onClick={onClickHandler}>
-      <div className={styles.searchListContainerActive}>
-        {searchedData.map((eachData, index) => {
-          return (
+    <div className={styles.searchListContainerActive} onClick={onClickHandler}>
+      {searchedData.map((eachData, index) => {
+        return (
+          <Link to={`movie/${eachData.movieId}`}>
             <div className={styles.searchedMovieContainer} key={index}>
+              <img
+                className={styles.poster_background}
+                src={eachData.imageUrl}
+                alt={eachData.movieName}
+              ></img>
+
               <div className={styles.imageContainer}>
                 <img
                   className={styles.poster}
@@ -29,12 +36,16 @@ function SearchedList({
                   alt={eachData.movieName}
                 ></img>
               </div>
-              <p className={styles.movieName}>{eachData.movieName}</p>
-              <p className={styles.year}>{eachData.year}</p>
+              <div className={styles.movie_name_wrapper}>
+                <p className={styles.movie_name}>{eachData.movieName}</p>
+              </div>
+              <div className={styles.year_wrapper}>
+                <p className={styles.year}>{eachData.year}</p>
+              </div>
             </div>
-          );
-        })}
-      </div>
+          </Link>
+        );
+      })}
     </div>
   );
 }
