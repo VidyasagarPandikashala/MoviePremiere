@@ -36,19 +36,28 @@ const HomePage = () => {
 
   return (
     <>
-      <NavigationBar
-        handleOnSearch={searchEventHandler}
-        searchedData={data}
-        onClickHandler={onClickEventHandler}
-        clickedOverlay={clickedOverlay}
-      ></NavigationBar>
-      <main className={styles.mainSection}>
-        <section className={styles.headerSection}>
-          <MovieCarousal></MovieCarousal>
-          <ComingSoonCard></ComingSoonCard>
-          <TopRated />
-        </section>
-      </main>
+      <div className={styles.home_page_background}>
+        <nav className={styles.nav_wrapper}>
+          <NavigationBar
+            className={styles.nav_component}
+            handleOnSearch={searchEventHandler}
+            searchedData={data}
+            onClickHandler={onClickEventHandler}
+            clickedOverlay={clickedOverlay}
+          ></NavigationBar>
+        </nav>
+        <main className={styles.main_section}>
+          <section className={styles.header_section}>
+            <MovieCarousal></MovieCarousal>
+            <ComingSoonCard
+              className={styles.list_style_comingsoon}
+            ></ComingSoonCard>
+          </section>
+          <section className={styles.display_in_vertical_carousal}>
+            <TopRated />
+          </section>
+        </main>
+      </div>
     </>
   );
 };
