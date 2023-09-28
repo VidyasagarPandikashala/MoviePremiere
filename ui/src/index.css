@@ -1,3 +1,64 @@
+:root {
+  --clr-primary-accent: #eabc17;
+  --clr-primary-neutral: #2c2304;
+  --clr-secondary-neutral: #faf6e9;
+  --clr-tertiary-neutral: #cac6b7;
+  --clr-secondry-icon: rgba(0, 15, 158, 0.8);
+  --clr-secondry-transparent-icon: rgba(0, 15, 158, 0.45);
+  --clr-text-neutral: #fffdf5;
+  --clr-overlay: rgba(202, 198, 183, 0.24);
+  --clr-overlay-transparent: linear-gradient(
+    to bottom,
+    rgba(44, 35, 4, 0.15) 0%,
+
+    rgba(250, 246, 233, 0.25) 100%
+  );
+  --gradient-to-left-accent: linear-gradient(
+    to left,
+    rgba(44, 35, 4, 0.3) 0%,
+    rgba(250, 246, 233, 0.45) 100%
+  );
+  --gradient-to-right-neutral: linear-gradient(
+    to right,
+    rgba(44, 35, 4, 0.3) 0%,
+    rgba(250, 246, 233, 0.45) 100%
+  );
+
+  --gradient-to-bottom-neutral: linear-gradient(
+    to bottom,
+    rgba(44, 35, 4, 0.75) 0%,
+
+    rgba(250, 246, 233, 0.25) 100%
+  );
+  --ff-primary: "Brandon Grotesque", sans-serif;
+  --ff-secondary: "Proxima Nova", sans-serif;
+
+  --fw-primary-900: bold;
+  --fw-primary-700: medium;
+
+  --fw-secondary-900: bold;
+  --fw-secondary-600: 600;
+  --fw-secondary-400: 400;
+
+  --fs-primary-large: 2rem;
+  --fs-primary-medium: 1.5rem;
+  --fs-primary-regular: 1rem;
+  --fs-primary-small: 0.75rem;
+  --fs-primary-verysmall: 0.5rem;
+
+  --fs-custom-text: 0.875rem;
+
+  --fs-secondary-large: 2rem;
+  --fs-secondary-medium: 1.5rem;
+  --fs-secondary-regular: 1rem;
+  --fs-secondary-small: 0.5rem;
+
+  --ff-logo: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+  --ff-paragraph: var(--ff-secondary);
+}
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -5,22 +66,16 @@
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+* {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font: inherit;
 }
-a {
-  text-decoration: none;
+
+html,
+body {
+  height: 100%;
 }
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
@@ -34,19 +89,16 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: var(--clr-secondary-neutral);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: #fdf9ea;
-  /* background-color: yellowgreen; */
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 
 /* Make images easier to work with */
@@ -56,31 +108,10 @@ picture {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-@font-face {
-  font-family: "Brandon Grotesque";
-  src: url("/public/fonts/Brandon_bld.otf") format("opentype"),
-    url("/public/fonts/Brandon_med.otf") format("opentype"),
-    url("/public/fonts/Brandon_reg.otf") format("opentype");
-}
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("/public/fonts/Proxima Nova Bold.otf") format("opentype"),
-    url("/public/fonts/ProximaNova-Regular.otf"),
-    url("/public/fonts/Proxima\ Nova\ Alt\ Light.otf")
-      url("/public/fonts/Proxima\ Nova\ Extrabold.otf");
-}
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
   *,
@@ -91,4 +122,46 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("E:\Vidyasagar\Coding\Repos\MoviePremiere\ui\public\fonts\Brandon_Grotesque\Brandon_bld.otf")
+    format("opentype");
+  font-weight: bold; /* Define the font weight for this variant */
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("E:\Vidyasagar\Coding\Repos\MoviePremiere\ui\public\fonts\Brandon_Grotesque\Brandon_med.otf")
+    format("opentype");
+  font-weight: medium; /* Define the font weight for this variant */
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("E:\Vidyasagar\Coding\Repos\MoviePremiere\ui\public\fonts\Brandon_Grotesque\Brandon_reg.otf")
+    format("opentype");
+  font-weight: regular; /* Define the font weight for this variant */
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("E:\Vidyasagar\Coding\Repos\MoviePremiere\ui\public\fonts\Proxima_Nova\Proxima Nova Alt Light.otf")
+    format("opentype");
+  font-weight: 400; /* Define the font weight for this variant */
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("E:\Vidyasagar\Coding\Repos\MoviePremiere\ui\public\fonts\Proxima_Nova\Proxima Nova Bold.otf")
+    format("opentype");
+  font-weight: bold; /* Define the font weight for this variant */
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("E:\Vidyasagar\Coding\Repos\MoviePremiere\ui\public\fonts\Proxima_Nova\ProximaNova-Regular.otf")
+    format("opentype");
+  font-weight: 600; /* Define the font weight for this variant */
 }

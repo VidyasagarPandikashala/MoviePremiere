@@ -72,58 +72,60 @@ function SignUp() {
   }
 
   return (
-    <>
-      <div className={styles.formContainer}>
+    <div className={styles.signup_background_container}>
+      <div className={styles.login_background_container}>
+        <LoginBackground></LoginBackground>
+      </div>
+      <div className={styles.form_container}>
         <form className={styles.form} onSubmit={submitEvnetHandler}>
-          <div className={styles.formInputWrapper}>
-            <div className={styles.userNameContainer}>
-              <input
-                className={styles.userName}
-                type="text"
-                placeholder="username"
-                name="username"
-                required="true"
-                onChange={userNameInputHandler}
-              />
-            </div>
-            <div className={styles.passwordContainer}>
-              <input
-                className={styles.password}
-                type="password"
-                placeholder="password"
-                name="password"
-                required="true"
-                onChange={passwordInputHandler}
-              />
-            </div>
-            <div className={styles.passwordContainer}>
-              <input
-                className={styles.password}
-                type="password"
-                placeholder="confirm password"
-                name="confirm password"
-                required="true"
-                onChange={confirmPasswordInputHandler}
-                onBlur={confirmPasswordBlurHandler}
-              />
-            </div>
-            <div className={styles.userNameContainer}>
-              <input
-                className={styles.userName}
-                type="email"
-                placeholder="email"
-                required="true"
-                onChange={emailInputHandler}
-              />
-            </div>
-            <div className={styles.btnContainer}>
-              <button type="submit">signup</button>
-            </div>
+          <div className={styles.userNameContainer}>
+            <input
+              className={styles.userName}
+              type="text"
+              placeholder="username"
+              name="username"
+              required="true"
+              onChange={userNameInputHandler}
+            />
+          </div>
+          <div className={styles.passwordContainer}>
+            <input
+              className={styles.password}
+              type="password"
+              placeholder="password"
+              name="password"
+              required="true"
+              onChange={passwordInputHandler}
+            />
+          </div>
+          <div className={styles.passwordContainer}>
+            <input
+              className={styles.password}
+              type="password"
+              placeholder="confirm password"
+              name="confirm password"
+              required="true"
+              onChange={confirmPasswordInputHandler}
+              onBlur={confirmPasswordBlurHandler}
+            />
+          </div>
+          <div className={styles.userNameContainer}>
+            <input
+              className={styles.userName}
+              type="email"
+              placeholder="email"
+              required="true"
+              onChange={emailInputHandler}
+            />
+          </div>
+          <div>
+            <button className={styles.sign_up_btn} type="submit">
+              signup
+            </button>
           </div>
         </form>
       </div>
-      <LoginBackground></LoginBackground>
-    </>
+    </div>
   );
 }
 

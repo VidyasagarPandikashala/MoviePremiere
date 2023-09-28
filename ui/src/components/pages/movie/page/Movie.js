@@ -89,45 +89,79 @@ function MoviePage() {
 
   return (
     <>
-      <div className={styles.movieBackground}>
-        <div className={styles.movieBackgroundOverlay} />
-        <Link to="/">
-          {" "}
-          <Logo className={styles.logo}></Logo>
-        </Link>
-        <FavouritesIcon
-          className={styles.favIcon}
-          customClassNameFavIcon={"favIconContainerMoviePage"}
-          onToggle={handleFavouritesToggle}
-          classStyle={favourite ? "iconAdded" : "iconNotAdded"}
-        ></FavouritesIcon>
-        <img
-          src={movieData.imageUrl}
-          className={styles.backgroundPoster}
-          alt="movie-name"
-        />
-        <h1 className={styles.moviename}>{movieData.movieName}</h1>
-        <h3 className={styles.releaseDate}>{movieData.releaseDate}</h3>
+      <div className={styles.movie_background}>
+        <div className={styles.image_wrapper}>
+          <img
+            src={movieData.imageUrl}
+            className={styles.background_poster}
+            alt="movie-name"
+          />
+        </div>
+        <div className={styles.movie_background_overlay} />
 
-        <div className={styles.toggleAboutAndReview}>
-          <div className={styles.aboutWrapper} onClick={handleAboutClickEvent}>
-            <h3>about</h3>
-            {aboutClicked ? <AboutSection /> : <></>}
+        <div className={styles.nav_bar}>
+          <Link to="/">
+            {" "}
+            <Logo className={styles.logo}></Logo>
+          </Link>
+          <FavouritesIcon
+            className={styles.favIcon}
+            customClassNameFavIcon={"favIconContainerMoviePage"}
+            onToggle={handleFavouritesToggle}
+            classStyle={favourite ? "iconAdded" : "iconNotAdded"}
+          ></FavouritesIcon>
+        </div>
+        <div className={styles.main_section}>
+          <div className={styles.movie_title_text_wrapper}>
+            <h1 className={styles.moviename}>
+              {movieData.movieName.toUpperCase()}
+            </h1>
+          </div>
+          <div className={styles.release_date_text_wrapper}>
+            <h3 className={styles.releaseDate}>{movieData.releaseDate}</h3>
           </div>
 
-          <div
-            className={styles.reviewWrapper}
-            onClick={handleReviewClickEvent}
-          >
-            <h3>Rating</h3>
-            {reviewClicked ? (
-              <ReviewSection
-                movieId={movieData.movieId}
-                reviewExist={reviewExists}
-              />
-            ) : (
-              <></>
-            )}
+          <div className={styles.toggleAboutAndReview}>
+            <div className={styles.about_review_button_wrapper}>
+              <div
+                className={
+                  aboutClicked
+                    ? styles.about_wrapper_on_click
+                    : styles.about_wrapper
+                }
+                onClick={handleAboutClickEvent}
+              >
+                <h3>ABOUT</h3>
+              </div>
+
+              <div
+                className={
+                  reviewClicked
+                    ? styles.review_wrapper_on_click
+                    : styles.review_wrapper
+                }
+                onClick={handleReviewClickEvent}
+              >
+                <h3>RATING</h3>
+              </div>
+            </div>
+            <div className={styles.section_detail_wrapper}>
+              <div>
+                {" "}
+                {aboutClicked ? <AboutSection movieData={movieData} /> : <></>}
+              </div>
+              <div>
+                {" "}
+                {reviewClicked ? (
+                  <ReviewSection
+                    movieId={movieData.movieId}
+                    reviewExist={reviewExists}
+                  />
+                ) : (
+                  <></>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>

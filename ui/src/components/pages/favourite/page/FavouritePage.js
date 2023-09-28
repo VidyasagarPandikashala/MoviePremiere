@@ -45,21 +45,25 @@ function FavouritePage() {
   }
   return (
     <>
-      <Link to="/">
-        <Logo></Logo>
-      </Link>
-      <div className={styles.movieCard}>
-        {favMovies.map((movieData) => {
-          return (
-            <MovieCard
-              key={movieData.movieId}
-              customClassNameFavIcon={"favIconContainerFavPage"}
-              movieData={movieData}
-              favouriteExist={selector.has(movieData.movieId)}
-              customContainerClassName={"sectionFavCardContainer"}
-            ></MovieCard>
-          );
-        })}
+      <div className={styles.favpage_container}>
+        <div className={styles.logo_container}>
+          <Link to="/">
+            <Logo></Logo>
+          </Link>
+        </div>
+        <div className={styles.movieCard}>
+          {favMovies.map((movieData) => {
+            return (
+              <MovieCard
+                key={movieData.movieId}
+                customClassNameFavIcon={"favIconContainerFavPage"}
+                movieData={movieData}
+                favouriteExist={selector.has(movieData.movieId)}
+                customContainerClassName={"sectionFavCardContainer"}
+              ></MovieCard>
+            );
+          })}
+        </div>
       </div>
     </>
   );

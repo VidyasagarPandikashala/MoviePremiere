@@ -1,48 +1,69 @@
+.section_topRated_card_container {
+  position: relative;
+  width: 320px;
+  height: 100%;
+}
+.image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  filter: blur(1px);
+  object-fit: cover;
+}
+.movieDetailOverlay {
+  position: absolute;
+
+  width: 100%;
+  height: 64px;
+
+  bottom: 0;
+  background: var(--gradient-to-bottom-neutral);
+}
+.movieName {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  font-family: var(--ff-heading);
+  color: var(--clr-primary-accent);
+  font-weight: var(--fw-primary-900);
+}
+.releaseDate {
+  margin-left: 1rem;
+  font-family: var(--ff-paragraph);
+  color: var(--clr-primary-accent);
+  font-weight: var(--fw-primary-400);
+}
 .sectionFavCardContainer {
   position: relative;
-  width: 560px;
-  height: auto;
-  margin: 160px 0 0 64px;
+  width: 500px;
+  height: 100%;
   box-shadow: -24px 60px 148px 16px black;
   border-radius: 2rem;
   padding: 0;
 }
-.image {
+.favourites_icon {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border-radius: 2rem;
-  object-fit: cover;
+  bottom: 1rem;
+  right: 1rem;
 }
-
-.movieDetailOverlay {
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 2rem;
-  margin-top: 650px;
-}
-.movieName {
-  color: #eabc17;
-  font-family: "Proxima Nova";
-  font-size: x-large;
-  margin-top: 1rem;
-  margin-left: 2rem;
-}
-.releaseDate {
-  color: #eabc17;
-  font-family: "Proxima Nova";
-  font-size: large;
-
-  margin-left: 2rem;
-}
-.customClassNameFavIcon {
-  margin-right: 3rem;
-}
-
-.sectionTopRatedCardContainer {
-  position: relative;
+@media (max-width: 1200px) {
+  .movieName {
+    margin-left: 1rem;
+    margin-top: 0.25rem;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-primary-small);
+    color: var(--clr-primary-accent);
+    font-weight: var(--fw-primary-900);
+  }
+  .releaseDate {
+    margin-left: 1rem;
+    font-family: var(--ff-paragraph);
+    color: var(--clr-primary-accent);
+    font-weight: var(--fw-primary-400);
+    font-size: var(--fs-primary-small);
+  }
 }

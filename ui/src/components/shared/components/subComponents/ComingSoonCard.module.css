@@ -1,108 +1,134 @@
-/* CSS for ComingSoonCard component */
+.wrapper_container {
+  width: 100%;
+  height: calc(max(1728px, 100%) * 0.2);
+  margin: 0;
 
-/* Wrapper Container */
-.wrapperContainer {
-  background-color: rgba(56, 54, 46, 1);
-  width: 28rem;
-  height: 30rem;
-  border-radius: 1rem;
-  z-index: 1;
-  /* box-shadow: 24px 60px 240px 16px black; */
-  box-shadow: -4px 16px 24px 4px rgb(80, 80, 79);
+  /* overflow-x: hidden; */
 }
-
-/* "coming soon..." Heading */
-.movieSectionName {
-  position: absolute;
-  font-size: 1.5rem;
-  font-family: "Proxima Nova";
-  font-weight: 600;
-  margin-top: 1rem;
-  padding: 0;
-  z-index: 1;
-  margin-left: 0.5rem;
-  background: linear-gradient(45deg, #eabc17, #c89c0e);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Movie List Container */
-.movieListContainer {
-  position: absolute;
-  background: rgba(234, 188, 23, 0.69);
-  width: 28rem;
-  height: 26rem;
-  margin-top: 4rem;
-  border-radius: 0rem 0rem 1rem 1rem;
+.movie_list_container {
+  background-color: var(--clr-overlay);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: 2rem;
+  border-radius: 8px;
 }
-.movieListContainer::-webkit-scrollbar {
+
+.movie_list_container::-webkit-scrollbar {
   display: none;
 }
 
-/* Movie Container */
-.movieContainer {
-  display: flex;
-  width: 35.5rem;
-  height: 4rem;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-}
-
-/* Image Container */
-.imageContainer {
-  background-color: rgba(35, 33, 24, 1);
+.movie_detail_container {
   position: relative;
-  width: 2.6rem;
-  height: 2rem;
-  align-self: flex-start;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-inline: 1rem;
+  margin-block: 0.5rem;
+  background-color: var(--clr-primary-neutral);
+  gap: 0.5rem;
+  height: 96px;
+  border-radius: 8px;
+  align-items: center;
 }
-
-/* Movie Image */
+.image_overlay_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.image_overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: blur(2px);
+}
+.imageContainer {
+  position: relative;
+  width: 4rem;
+  height: 100%;
+  border-radius: 8px;
+  background-color: gray;
+}
 .image {
-  font-size: 8px;
-  color: black;
-  max-width: 100%;
-  max-height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+
   object-fit: cover;
 }
-
-/* Movie Name Container */
-.movieNameContainer {
-  width: 16.5rem;
-  height: 4rem;
-  margin-left: 0.6rem;
-  align-items: center;
-  justify-content: center;
+.movie_name_container {
+  color: var(--clr-secondary-neutral);
+  z-index: 1;
 }
-
-/* Movie Year Container */
 .movieYearContainer {
-  width: 9.5rem;
-  height: 2rem;
-  margin-left: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
+  color: var(--clr-secondary-neutral);
+  z-index: 1;
+  text-align: center;
 }
-
-/* Movie Name */
 .movieName {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #070600;
-  align-self: center;
-  margin-left: 4rem;
-  font-family: "Proxima Nova";
+  font-family: var(--ff-paragraph);
+  font-weight: var(--fw-secondary-400);
+  font-size: var(--fs-custom-text);
+  letter-spacing: 0.18ch;
+}
+.movieYear {
+  font-family: var(--ff-paragraph);
+  font-weight: var(--fw-secondary-400);
+  font-size: var(--fs-custom-text);
+  letter-spacing: 0.18ch;
+}
+.movie_section_name {
+  font-family: var(--ff-paragraph);
+  font-weight: var(--fw-secondary-400);
+  font-size: var(--fs-custom-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.18ch;
 }
 
-/* Movie Year */
-.movieYear {
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Proxima Nova";
-  color: #070600;
-  align-self: center;
-  justify-self: center;
+@media (max-width: 1200px) {
+  .wrapper_container {
+    position: relative;
+    width: calc(max(950px, 100%) * 0.7);
+    margin-left: 0rem;
+    height: 40%;
+    padding-right: 5rem;
+    border-radius: 5px;
+  }
+  .movieName {
+    font-family: var(--ff-paragraph);
+    font-weight: var(--fw-secondary-900);
+    font-size: calc(var(--fs-custom-text) * 0.75);
+    letter-spacing: 0.18ch;
+  }
+  .movieYear {
+    font-family: var(--ff-paragraph);
+    font-weight: var(--fw-secondary-400);
+    font-size: var(--fs-custom-text);
+    letter-spacing: 0.18ch;
+  }
+  .movie_section_name {
+    font-family: var(--ff-paragraph);
+    font-weight: var(--fw-secondary-900);
+    font-size: calc(var(--fs-custom-text) * 0.75);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.18ch;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper_container {
+    margin: 0;
+    margin-top: 0;
+
+    padding: 0;
+    width: 70%;
+    height: 40%;
+    border-radius: 5px;
+  }
 }

@@ -1,18 +1,21 @@
-.logoContainer {
-  position: absolute;
-  display: flex;
-  background-color: rgba(17, 14, 1, 0.8);
-  border-radius: 01rem;
-  width: 5rem;
-  height: 5rem;
-  margin: 1.5rem 0 0 4rem;
-  justify-content: center;
-  z-index: 1;
+:root {
+  --margin-left-max: calc(max(1728px, 100%) * 0.08418);
+  --margin-left-min: calc(min(1728px, 100%) * 0.08418);
+  /* --margin-left: 8.674%; */
 }
 
-.logo {
-  align-self: center;
-  font-size: 32px;
-  font-family: "Brandon Grotesque", sans-serif;
-  color: #eabc17;
+.logoContainer {
+  display: flex;
+  width: 116px;
+  height: 56px;
+  /* margin-left: 132px; */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-primary-neutral);
+}
+
+.logoText {
+  color: var(--clr-primary-accent);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-primary-large);
 }

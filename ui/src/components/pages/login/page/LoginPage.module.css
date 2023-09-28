@@ -1,69 +1,68 @@
-.formContainer {
-  position: absolute;
-  display: grid;
-  grid-template-rows: 1fr 0.5fr;
-  background-color: rgba(35, 33, 24, 1);
-  width: 35rem;
-  height: 20rem;
-
-  margin-top: 18.5rem;
-  margin-left: 820px;
+.login_page_container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  z-index: 1;
-  border-radius: 20px;
+  background-color: var(--clr-secondary-neutral);
+}
+.login_background_container {
+  width: 100%;
+  height: 100%;
+}
+.form_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: calc(min(1728px, 100%) * 0.35);
+  height: 288px;
+  background-color: rgba(44, 35, 4, 0.97);
+  align-items: center;
+  justify-content: center;
 }
 
-.formInputWrapper {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
+.form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
 }
-
 .userName {
-  background-color: rgba(252, 247, 231, 1);
-  width: 400px;
-  height: 40px;
   border: none;
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  margin-top: 1rem;
+  width: 100%;
+  height: 2em;
+  font-family: var(--ff-paragraph);
+  padding-inline: 0.5rem;
 }
-
 .password {
-  background-color: rgba(252, 247, 231, 1);
-  width: 400px;
-  height: 40px;
   border: none;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-top: 1rem;
+  width: 100%;
+  height: 2em;
+  font-family: var(--ff-paragraph);
+  padding-inline: 0.5rem;
 }
 
-.btnContainer {
-  justify-self: center;
-}
-button {
-  color: black;
-  width: 96px;
-  height: 32px;
-  margin-top: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
+.login_btn {
+  width: 4em;
   border: none;
-}
-p {
-  color: rgba(234, 188, 23, 1);
-}
-button:hover {
-  background-color: #eabc17;
-  color: black;
+  border-radius: 0.5rem;
+  background-color: var(--clr-primary-accent);
+  color: var(--clr-primary-neutral);
+  font-family: var(--ff-paragraph);
+  margin-left: -24px;
+  cursor: pointer;
 }
 .anchorTag {
-  color: #eee7d0;
-}
-.anchorTag:hover {
-  color: #eabc17;
-  text-decoration: underline;
+  color: var(--clr-primary-accent);
+  font-family: var(--ff-paragraph);
+  font-size: var(--fs-custom-text);
+  font-weight: var(--fw-secondary-600);
+  letter-spacing: 0.12ch;
+  text-decoration: none;
 }

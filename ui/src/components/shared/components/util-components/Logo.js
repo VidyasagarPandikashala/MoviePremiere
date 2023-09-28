@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <>
       <div className={styles.logoContainer}>
-        <h1 className={styles.logo}> MP </h1>
+        <h1 className={styles.logoText}> MP </h1>
       </div>
     </>
   );
