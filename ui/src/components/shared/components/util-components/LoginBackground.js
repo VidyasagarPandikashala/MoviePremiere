@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import styles from "./LoginBackground.module.css";
+import { Link } from 'react-router-dom'
+import styles from './LoginBackground.module.css'
 function LoginBackground() {
   return (
-    <div>
-      <Link to={"/"}>
+    <div className={styles.login_background_container}>
+      <Link to={'/'}>
         <div className={styles.title}>
           <h1 className={styles.movie}>MOVIE</h1>
           <h1 className={styles.premiere}>PREMIERE</h1>
@@ -17,7 +17,7 @@ function LoginBackground() {
         ></img>
       </div>
     </div>
-  );
+  )
 }
 
-export default LoginBackground;
+export default LoginBackground
