@@ -1,9 +1,38 @@
-.navigationContainer {
-  position: relative;
+.navigation_container {
+  width: 100%;
+  height: 100%;
   display: flex;
 
-  width: 100%;
-  height: 8rem;
+  align-items: center;
+}
+.hamburg_icon {
+  display: none;
+}
 
-  /* border-radius: 0 0 1rem 1rem; */
+@media (max-width: 1200px) {
+  .navigation_container {
+    height: 100%;
+    display: flex;
+    margin-inline: 1rem;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .navigation_container {
+    height: 100%;
+    display: flex;
+    margin-inline: 1rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hamburg_icon {
+    display: block;
+    align-self: center;
+    justify-self: end;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
 }
